@@ -13,7 +13,10 @@ const createVehicleHandler = async (
     // Valida que se proporcionen los datos necesarios
     if (!name || !passengers || !color) {
       return res.status(400).json({
-        error: 'Se requieren título y descripción para crear un nuevo todo.',
+        name: '',
+        color: '',
+        passengers: NaN,
+        id: '',
       })
     }
 
@@ -29,14 +32,17 @@ const createVehicleHandler = async (
     // Aquí deberías integrar tu lógica para almacenar el todo en tu base de datos
     // Por ejemplo, podrías usar una base de datos como MongoDB o guardar en un archivo JSON
     // En este ejemplo, simplemente agregamos el nuevo todo a un array simulando una base de datos
-    todos.push(newVehicle)
+    // todos.push(newVehicle)
 
     // Devuelve el nuevo todo como respuesta
     return res.status(201).json(newVehicle)
   } else {
     // Devuelve un error si la solicitud no es de tipo POST
     return res.status(405).json({
-      error: 'Método no permitido. Utiliza POST para crear un nuevo todo.',
+      name: '',
+      color: '',
+      passengers: NaN,
+      id: '',
     })
   }
 }

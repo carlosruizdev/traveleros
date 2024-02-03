@@ -7,6 +7,9 @@ const vehicles: Vehicle[] = [
   { id: '2', name: 'Aveo', passengers: 5, color: 'rojo' },
 ]
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<Vehicle[]>) {
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Vehicle[]>
+) {
   res.status(200).json(vehicles)
 }

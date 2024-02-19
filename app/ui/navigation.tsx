@@ -11,7 +11,7 @@ export default function NavigationBar() {
       />
       <ul className='flex justify-between gap-x-8'>
         <li>
-          <a href='/'>Home</a>
+          <a href='/'>Homepage</a>
         </li>
         <li>
           <a href='/contact'>Contact</a>

@@ -21,8 +21,11 @@ jobs:
         with:
           node-version: '18'  # Selecciona la versión de Node.js que necesites
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - uses: pnpm/action-setup@v3
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
 
       - name: Install Dependencies
         run: pnpm install  # O yarn install si prefieres Yarn

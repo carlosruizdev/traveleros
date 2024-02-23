@@ -14,11 +14,13 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          node-version: '20'
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'  # Selecciona la versión de Node.js que necesites
+          node-version: '20'  # Selecciona la versión de Node.js que necesites
 
       - uses: pnpm/action-setup@v3
         name: Install pnpm
@@ -37,6 +39,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          node-version: '20'
       - uses: pnpm/action-setup@v3
         name: Install pnpm
         with:

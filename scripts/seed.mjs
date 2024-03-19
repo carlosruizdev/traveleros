@@ -1,5 +1,5 @@
 import { db } from '@vercel/postgres'
-import { vehicles, cities } from '../app/data/sample-data.js'
+import { vehicles, cities } from '../app/data/sample-data.mjs'
 
 async function seedVehicles(client) {
   try {

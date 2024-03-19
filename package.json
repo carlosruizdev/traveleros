@@ -2,7 +2,6 @@
   "name": "traveleros",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +9,7 @@
     "lint": "next lint",
     "prepare": "husky",
     "format": "eslint . --fix",
-    "seed": "NODE_ENV=development node -r dotenv/config ./scripts/seed.js"
+    "seed": "NODE_ENV=development node -r dotenv/config ./scripts/seed.mjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",
